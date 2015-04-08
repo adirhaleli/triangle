@@ -1,0 +1,13 @@
+{
+  "name": "Triangle Adapter",
+  "version": "1.0",
+  "description": "Triangle Chrome adapter, allows remote music control from Triangle",
+  "manifest_version": 2,
+  "background": {
+    "scripts": ["triangle.js"],
+    "persistent": true
+  },
+  "permissions": [
+    "tabs", "https://soundcloud.com/*"
+  ]
+}
