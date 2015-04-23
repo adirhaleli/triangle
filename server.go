@@ -33,7 +33,8 @@ func server() {
 	serverInstance := &TriangleServer{}
 	chrome := &chromeAdapter{server: serverInstance}
 	mpd := &mpdAdapter{server: serverInstance}
-	serverInstance.adapters = []adapter{chrome, mpd}
+	mpchc := &mpchcAdapter{server: serverInstance}
+	serverInstance.adapters = []adapter{chrome, mpd, mpchc}
 
 	// Load all adapters
 	for _, adapter := range serverInstance.adapters {
